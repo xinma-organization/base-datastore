@@ -11,7 +11,7 @@ import com.aliyun.openservices.ots.model.PrimaryKeyType;
 
 public class OtsTableUtilsTest extends DataStoreBaseTest {
 
-	@Test(enabled=false)
+	@Test(enabled = false)
 	public void createTable() {
 
 		List<KeyValue<String, PrimaryKeyType>> primaryKeyList = new ArrayList<KeyValue<String, PrimaryKeyType>>();

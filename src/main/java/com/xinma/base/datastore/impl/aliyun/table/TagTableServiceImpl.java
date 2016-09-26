@@ -175,7 +175,7 @@ public class TagTableServiceImpl implements TagTableService {
 			throw new TableException(e, TableError.JsonProcessingExceptionErr);
 		}
 
-		rowUpdateChange.setCondition(new Condition(RowExistenceExpectation.EXPECT_EXIST));
+		rowUpdateChange.setCondition(new Condition(RowExistenceExpectation.IGNORE));
 
 		OtsRowUtils.updateRow(otsClient, rowUpdateChange);
 	}

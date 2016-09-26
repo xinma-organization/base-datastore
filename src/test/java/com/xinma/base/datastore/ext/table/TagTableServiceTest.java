@@ -49,9 +49,9 @@ public class TagTableServiceTest extends DataStoreBaseTest {
 		// throw new RuntimeException("Test not implemented");
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void getTagBasicInfo() throws JsonProcessingException {
-		TagBasicInfoEO tagBasicInfo = tagTableService.getTagBasicInfo(1010167820);
+		TagBasicInfoEO tagBasicInfo = tagTableService.getTagBasicInfo(1010167820L);
 		System.out.println(new ObjectMapper().writeValueAsString(tagBasicInfo));
 		// throw new RuntimeException("Test not implemented");
 	}
@@ -75,7 +75,7 @@ public class TagTableServiceTest extends DataStoreBaseTest {
 		tagBasicInfo.setFactoryId(1);
 		tagBasicInfo.setProduceTime(new Date());
 
-		BigInteger startUniqueCode = BigInteger.valueOf(1010167820);
+		BigInteger startUniqueCode = BigInteger.valueOf(1010167820L);
 		long tagCount = 100;
 		TagBuilder builder = new TagBuilder(TagConstants.CODE_VERSION_1, startUniqueCode, tagCount);
 
